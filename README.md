@@ -1,6 +1,7 @@
 # README
 
 <p>Step to install:<p>
+	
 ``` 
 bundle install 
 ```
