@@ -13,4 +13,11 @@
 class ForumPost < ApplicationRecord
 	belongs_to :user
 	belongs_to :forum_thread
+
+	def send_notification!
+		users = forum_thread.users.uniq - [user]
+		users.each do |user|
+			NotificationMailer.forum_post_notification(user, self).deliver_later
+		end
+	end
 end

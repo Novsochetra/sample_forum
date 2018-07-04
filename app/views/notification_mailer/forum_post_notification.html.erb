@@ -1,0 +1,4 @@
+<p>New Post in Forum "<b><%= @forum_post.forum_thread.subject %></b>"</p>
+
+You can check this out via url: 
+<%= link_to "#{forum_thread_url(@forum_post.forum_thread)}", forum_thread_url(@forum_post.forum_thread) %>
