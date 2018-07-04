@@ -1,7 +1,9 @@
 # README
 
 <p>Step to install:<p>
-``` bundle install ```
+``` 
+bundle install 
+```
 
 <p>Then put your email and password inside <b><i>config/environments/development.rb</i></b></p>
 
