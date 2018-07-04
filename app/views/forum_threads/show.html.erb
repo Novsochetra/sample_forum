@@ -1,0 +1,41 @@
+<div>
+	<%= link_to forum_threads_path do %>
+		<i class="fa fa-long-arrow-left"></i> Back To Forum
+	<% end %>
+</div><br>
+
+<div class="col-sm-10">
+<div class="blog-post">
+  <div class="card">
+	  <div class="card-header">
+	  	Created by <a href="#"><%= @forum_thread.user.email %></a> on 
+	  	<small>
+	  		<i><%= @forum_thread.created_at.strftime("%B, %d, %Y") %></i>
+	  	</small>
+	  </div>
+	  <div class="card-body">
+	    <blockquote class="blockquote mb-0">
+	    	<!-- forum thread -->
+	      <%= @forum_thread.subject %>
+
+	      <!-- comment display part -->
+	      <% @forum_thread.forum_posts.each do |post| %>
+	      	<footer class="blockquote-footer">
+	      		<small>
+	      			<a href=""><%= post.user.email %></a> 
+	      			commented 
+	      			<i><%= time_ago_in_words(post.created_at) %></i>
+	      		</small>
+					  <div class="card card-body">
+					    <small><%= post.body %></small>
+					  </div>
+	      	</footer>
+	      <% end %>
+
+	    </blockquote>
+	  </div>
+	</div><hr>
+</div>
+
+<%= render partial: 'forum_threads/forum_posts/form', locals: { forum_thread: @forum_thread } %>
+</div>

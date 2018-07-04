@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forum</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/download.ico" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container-fluid h-100">
+      <%= render partial: 'layouts/navbar' %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

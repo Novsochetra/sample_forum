@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-sm-9">
+		<h3>Forum</h3><br>
+		<% @forum_threads.each do |forum_thread| %>
+			<div class="blog-post">
+			  <h4><%= link_to forum_thread.subject, forum_thread_path(forum_thread) %></h4>
+			  <small class="text-secondary">
+			  	Posted by 
+			  	<a href="#"><%= forum_thread.user.email %></a>
+			  	on <i><%= forum_thread.created_at.strftime("%B, %d, %Y") %></i>
+			  </small>
+			  <hr>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="col-sm-3">
+		<%= link_to 'New Thread', new_forum_thread_path, class: 'btn btn-outline-success col-12'%>
+	</div>
+</div>

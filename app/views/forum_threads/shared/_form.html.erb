@@ -1,0 +1,10 @@
+<%= simple_form_for @forum_thread do |f| %>
+  <%= f.label :subject, hidden: true %>
+  <%= f.input_field :subject, class: 'form-control', placeholder: 'Title' %><br/>
+  
+  <%= f.simple_fields_for :forum_posts do |post| %>
+  	<%= post.input_field :body, class: 'form-control', placeholder: 'Add a comment', as: :text, rows: 10 %><br/>
+  <% end %>
+
+  <%= f.submit 'Save', class: "btn btn-outline-success col-12" %>
+<% end %>
