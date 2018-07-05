@@ -19,6 +19,8 @@ gem 'animate-rails', '~> 1.0', '>= 1.0.10'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'local_time', '~> 2.0', '>= 2.0.1'
+gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

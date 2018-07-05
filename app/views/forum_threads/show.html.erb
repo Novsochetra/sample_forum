@@ -10,7 +10,7 @@
 	  <div class="card-header">
 	  	Created by <a href="#"><%= @forum_thread.user.email %></a> on 
 	  	<small>
-	  		<i><%= @forum_thread.created_at.strftime("%B, %d, %Y") %></i>
+	  		<i><%= local_time_ago @forum_thread.created_at %></i>
 	  	</small>
 	  </div>
 	  <div class="card-body">
@@ -27,7 +27,7 @@
 	      			<i><%= time_ago_in_words(post.created_at) %></i>
 	      		</small>
 					  <div class="card card-body">
-					    <small><%= post.body %></small>
+					    <small><%= simple_format post.body %></small>
 					  </div>
 	      	</footer>
 	      <% end %>

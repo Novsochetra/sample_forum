@@ -16,4 +16,6 @@
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
+//= require local-time
+//= require ckeditor/init
 //= require_tree .

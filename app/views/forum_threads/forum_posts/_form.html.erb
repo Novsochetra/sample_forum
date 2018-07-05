@@ -1,10 +1,9 @@
 <%= simple_form_for([forum_thread, ForumPost.new], method: :post, url: forum_thread_forum_posts_path(forum_thread)) do |f| %>
 	<div class="input-group mb-3">
-		<%= f.input_field :body, class: 'form-control', placeholder: 'Add a comment', as: :string, autofocus: true %><br/>
-	  <div class="input-group-prepend">
-	    <div class="input-group-text">
-				<%= f.submit 'send', class: "btn btn-outline-success col-12" %>
-	    </div>
-	  </div>
+		<%= f.cktext_area :body, ckeditor: { language: 'en'}, class: 'form-control', placeholder: 'Add a comment'  %>
+	</div>
+
+	<div class="input-group mb-3">
+		<%= f.submit 'Post', class: "btn btn-outline-success col-12" %>
 	</div>
 <% end %>
