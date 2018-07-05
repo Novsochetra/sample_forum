@@ -1,5 +1,5 @@
 class NotificationMailer < ApplicationMailer
-	default from: 'sochetra.nov.freestyler@gmail.com'
+	default from: 'sochetra12.nov@gmail.com'
 	
 	def forum_post_notification(user, forum_post)
 		@user = user

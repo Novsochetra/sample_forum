@@ -18,6 +18,7 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'animate-rails', '~> 1.0', '>= 1.0.10'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'ransack', github: 'activerecord-hackery/ransack'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
