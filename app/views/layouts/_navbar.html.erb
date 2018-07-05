@@ -1,14 +1,14 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-1 mb-3 bg-white border-bottom box-shadow">
   <%= link_to 'Ruby on Rails', root_path, class: 'my-0 mr-md-auto font-weight-normal text-dark' %>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" href="#">Features</a>
-    <a class="p-2 text-dark" href="#">Enterprise</a>
-    <a class="p-2 text-dark" href="#">Support</a>
     <%= link_to 'Forum', forum_threads_path, class: 'p-2 text-dark' %>
+    <% if user_signed_in? %>
+      <%= link_to users_profile_path, class: 'p-2 text-dark' do %>
+        Profile <i class="fa fa-user-circle"></i>
+      <% end %>
+      <%= link_to 'Log out', destroy_user_session_path, class: 'p-2 text-dark', method: :delete %>
+    <% else %>
+      <%= link_to 'Sign up', new_user_session_path, class: 'p-2 text-dark' %>
+    <% end %>
   </nav>
-  <% if user_signed_in? %>
-    <%= link_to 'Log out', destroy_user_session_path, class: 'btn btn-outline-primary', method: :delete %>
-  <% else %>
-    <%= link_to 'Sign up', new_user_session_path, class: 'btn btn-outline-primary' %>
-  <% end %>
 </div>
