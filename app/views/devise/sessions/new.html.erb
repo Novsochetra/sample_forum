@@ -1,8 +1,8 @@
 <div class="row h-100 justify-content-center align-items-center">
   <div class="col-sm-4">
-    <div class="card mb-3 box-shadow animated slideInDown">
+    <div class="card mb-3 box-shadow">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal text-center">Log in</h4>
+        <h4 class="my-0 font-weight-normal text-center">Sign in</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
@@ -30,7 +30,7 @@
             <% end -%>
 
             <div class="actions">
-              <%= f.submit "Log in", class: "btn btn-outline-success col-12" %>
+              <%= f.submit "Sign in", class: "btn btn-outline-success col-12", :data => { :disable_with => "Processing ..." } %>
             </div>
           <% end %>
         </ul>
